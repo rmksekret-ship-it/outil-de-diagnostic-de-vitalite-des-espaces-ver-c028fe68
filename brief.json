@@ -1,0 +1,291 @@
+{
+  "run_id": "run-1781223829415",
+  "job_index": 2,
+  "params": {
+    "owner_user_id": "user-1774825923424-663",
+    "owner_username": "inso",
+    "owner_display_name": "Inso",
+    "count": 3,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Permet aux gestionnaires d'espaces verts et aux citoyens d'analyser le bien-être de leur environnement végéta…",
+    "notes": "Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.\nUtilise des données sur la diversité des espèces végétales et animales, l'état du sol, l'irrigation, etc.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "",
+    "network_hosting_pool": "",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "provider_space_id": "new-sites",
+    "provider_space_name": "New Sites",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": false,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "tool",
+    "archetype_mix": [
+      "tool"
+    ],
+    "forced_design_theme": "copper-grid",
+    "forced_structure_preset": "precision-bento",
+    "site_idea_title": "Outil de Diagnostic de Vitalité des Espaces Verts Urbains",
+    "site_idea_summary": "Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés."
+  },
+  "site_spec": {
+    "slug": "outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68",
+    "theme": {
+      "name": "Copper Grid",
+      "slug": "copper-grid",
+      "eyebrow": "Editorial Utility",
+      "family": "editorial-warm",
+      "moods": [
+        "editorial",
+        "warm",
+        "premium",
+        "storytelling"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "home",
+        "property",
+        "renovation",
+        "budget",
+        "advice"
+      ],
+      "keywords": [
+        "craft",
+        "trust",
+        "service",
+        "quote"
+      ],
+      "token_index": [
+        "advice",
+        "budget",
+        "calculator",
+        "copper",
+        "craft",
+        "editorial",
+        "generator",
+        "grid",
+        "home",
+        "premium",
+        "property",
+        "quote",
+        "renovation",
+        "service",
+        "storytelling",
+        "tool",
+        "trust",
+        "utility",
+        "warm"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap",
+      "display_font": "\"Fraunces\", serif",
+      "body_font": "\"Space Grotesk\", sans-serif",
+      "layout": "showcase",
+      "card_style": "paper",
+      "button_style": "gradient",
+      "decor_style": "ribbons",
+      "hero_template": "0.94fr 1.06fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 2,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "30px",
+      "card_radius": "24px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "18px",
+      "palette": {
+        "bg": "#15110f",
+        "surface": "rgba(36, 25, 20, 0.8)",
+        "surface_border": "rgba(255, 255, 255, 0.08)",
+        "text": "#fff2e2",
+        "muted": "#d1b69d",
+        "accent": "#ff9d57",
+        "accent_alt": "#7dd3fc",
+        "hero_glow": "rgba(255, 157, 87, 0.16)",
+        "button_text": "#25140b",
+        "panel_alt": "rgba(255, 255, 255, 0.05)",
+        "shadow": "0 26px 72px rgba(11, 8, 6, 0.35)",
+        "input_fill": "rgba(255, 255, 255, 0.05)"
+      }
+    },
+    "structure": {
+      "name": "Precision Bento",
+      "slug": "precision-bento",
+      "hero_variant": "split",
+      "proof_variant": "metrics",
+      "section_order": [
+        "features",
+        "proof",
+        "seo",
+        "faq"
+      ],
+      "feature_columns": 4,
+      "faq_columns": 3,
+      "family": "precision-bento",
+      "moods": [
+        "clean",
+        "modular",
+        "premium"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "saas",
+        "admin",
+        "compliance",
+        "analysis"
+      ],
+      "keywords": [
+        "bento",
+        "precision",
+        "cards",
+        "operator"
+      ],
+      "token_index": [
+        "admin",
+        "analysis",
+        "bento",
+        "calculator",
+        "cards",
+        "clean",
+        "compliance",
+        "faq",
+        "features",
+        "generator",
+        "metrics",
+        "modular",
+        "operator",
+        "precision",
+        "premium",
+        "proof",
+        "saas",
+        "seo",
+        "split",
+        "tool"
+      ]
+    },
+    "render_direction": "atlas-report",
+    "render_direction_name": "Atlas Report",
+    "page_blueprint": "dossier-rail",
+    "page_blueprint_name": "Dossier Rail",
+    "title": "Outil de Diagnostic de Vitalité des Espaces Verts Urbains",
+    "tagline": "ÉVALUEZ LA SANTÉ DE VOS ESPACES VERTS AVEC PRÉCISION",
+    "description": "Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "LANCER LE DIAGNOSTIC",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "primary",
+        "label": "Texte ou besoin",
+        "type": "text",
+        "placeholder": "Votre besoin principal",
+        "weight": 1.0
+      },
+      {
+        "id": "context",
+        "label": "Contexte",
+        "type": "text",
+        "placeholder": "Situation ou objectif",
+        "weight": 1.0
+      },
+      {
+        "id": "scope",
+        "label": "Intensité",
+        "type": "number",
+        "placeholder": "3",
+        "weight": 0.3
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Atlas Report",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Atlas Report",
+      "LANCER LE DIAGNOSTIC",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "",
+    "runtime_mode": "analysis_tool",
+    "page_variant": "console",
+    "faq_topic": "Outil de Diagnostic de Vitalité des Espaces Verts Urbains",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Outil de Diagnostic de Vitalité des Espaces Verts Urbains ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Outil de Diagnostic de Vitalité des Espaces Verts Urbains et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Outil de Diagnostic de Vitalité des Espaces Verts Urbains | ÉVALUEZ LA SANTÉ DE VOS ESPACES VERTS AVEC PRÉCISION</title>\n    <meta name=\"description\" content=\"Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.\">\n    <style>\n        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');\n\n        :root {\n            --dark-surface: #1a1a1a;\n            --medium-dark: #2a2a2a;\n            --copper-accent: #b87333;\n            --text-light: #e0e0e0;\n            --text-muted: #a0a0a0;\n            --border-color: #444;\n            --font-display: 'Roboto Condensed', sans-serif;\n            --font-body: 'Noto Sans', sans-serif;\n        }\n\n        body {\n            font-family: var(--font-body);\n            color: var(--text-light);\n            background-color: var(--dark-surface);\n            margin: 0;\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--medium-dark);\n            padding: 1.5rem 5%;\n            border-bottom: 1px solid var(--border-color);\n            text-align: center;\n        }\n\n        header h1 {\n            font-family: var(--font-display);\n            font-size: 2.5rem;\n            color: var(--copper-accent);\n            margin: 0;\n            text-transform: uppercase;\n            letter-spacing: 2px;\n        }\n\n        .container {\n            width: 90%;\n            max-width: 1200px;\n            margin: 0 auto;\n            padding: 2rem 0;\n            display: grid;\n            grid-template-columns: 1fr 2fr;\n            gap: 4rem;\n            flex-grow: 1;\n        }\n\n        .statement-block {\n            padding: 2rem;\n            background-color: var(--medium-dark);\n            border: 1px solid var(--border-color);\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n        }\n\n        .statement-block h2 {\n            font-family: var(--font-display);\n            font-size: 2.2rem;\n            color: var(--copper-accent);\n            margin-top: 0;\n            margin-bottom: 1rem;\n            line-height: 1.2;\n            text-transform: uppercase;\n        }\n\n        .statement-block p {\n            font-size: 1.1rem;\n            color: var(--text-light);\n            margin-bottom: 1.5rem;\n        }\n\n        .statement-block ul {\n            list-style: none;\n            padding: 0;\n            margin-top: 1.5rem;\n        }\n\n        .statement-block ul li {\n            position: relative;\n            padding-left: 1.8rem;\n            margin-bottom: 0.8rem;\n            color: var(--text-light);\n        }\n\n        .statement-block ul li::before {\n            content: '✓';\n            color: var(--copper-accent);\n            position: absolute;\n            left: 0;\n            font-weight: bold;\n        }\n\n        .tool-section {\n            background-color: var(--medium-dark);\n            border: 1px solid var(--border-color);\n            padding: 2rem;\n        }\n\n        .tool-section h3 {\n            font-family: var(--font-display);\n            font-size: 1.8rem;\n            color: var(--copper-accent);\n            margin-top: 0;\n            margin-bottom: 1.5rem;\n            text-transform: uppercase;\n        }\n\n        #tool-form label {\n            display: block;\n            margin-bottom: 0.5rem;\n            font-size: 0.95rem;\n            color: var(--text-muted);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n        #tool-form input[type=\"number\"],\n        #tool-form select,\n        #tool-form textarea {\n            width: calc(100% - 20px);\n            padding: 10px;\n            margin-bottom: 1.2rem;\n            background-color: var(--dark-surface);\n            border: 1px solid var(--border-color);\n            color: var(--text-light);\n            font-family: var(--font-body);\n            font-size: 1rem;\n            box-sizing: border-box;\n        }\n\n        #tool-form input[type=\"number\"]:focus,\n        #tool-form select:focus,\n        #tool-form textarea:focus {\n            outline: none;\n            border-color: var(--copper-accent);\n        }\n\n        #tool-submit {\n            display: block;\n            width: 100%;\n            padding: 12px 20px;\n            background-color: var(--copper-accent);\n            color: var(--dark-surface);\n            border: none;\n            cursor: pointer;\n            font-family: var(--font-display);\n            font-size: 1.1rem;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            transition: background-color 0.3s ease;\n            margin-top: 1.5rem;\n        }\n\n        #tool-submit:hover {\n            background-color: #d18d42;\n        }\n\n        #tool-result {\n            margin-top: 2rem;\n            padding: 1.5rem;\n            background-color: var(--dark-surface);\n            border: 1px solid var(--border-color);\n            color: var(--text-light);\n            min-height: 100px;\n        }\n\n        #tool-result h4 {\n            font-family: var(--font-display);\n            color: var(--copper-accent);\n            margin-top: 0;\n            margin-bottom: 1rem;\n            text-transform: uppercase;\n            letter-spacing: 0.8px;\n        }\n\n        #tool-result p {\n            margin-bottom: 0.8rem;\n            font-size: 1rem;\n        }\n\n        .summary-section {\n            grid-column: 1 / -1;\n            padding: 2rem;\n            background-color: var(--medium-dark);\n            border: 1px solid var(--border-color);\n            margin-top: 2rem;\n        }\n\n        .summary-section h2 {\n            font-family: var(--font-display);\n            font-size: 2rem;\n            color: var(--copper-accent);\n            text-align: center;\n            margin-bottom: 1.5rem;\n            text-transform: uppercase;\n        }\n\n        .summary-section .key-metrics {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n            gap: 1.5rem;\n            margin-top: 2rem;\n        }\n\n        .key-metric-item {\n            background-color: var(--dark-surface);\n            padding: 1.5rem;\n            border: 1px solid var(--border-color);\n            text-align: center;\n        }\n\n        .key-metric-item h4 {\n            font-family: var(--font-display);\n            color: var(--copper-accent);\n            margin-top: 0;\n            font-size: 1.3rem;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n        .key-metric-item p {\n            font-size: 1rem;\n            color: var(--text-muted);\n            margin: 0;\n        }\n\n        .seo-section {\n            grid-column: 1 / -1;\n            background-color: var(--dark-surface);\n            border-top: 1px solid var(--border-color);\n            padding: 3rem 5%;\n            font-size: 0.9rem;\n            color: var(--text-muted);\n            line-height: 1.8;\n        }\n\n        .seo-section h3 {\n            font-family: var(--font-display);\n            color: var(--copper-accent);\n            margin-top: 0;\n            margin-bottom: 1.5rem;\n            text-transform: uppercase;\n            font-size: 1.4rem;\n        }\n\n        .seo-section a {\n            color: var(--copper-accent);\n            text-decoration: none;\n        }\n\n        .seo-section a:hover {\n            text-decoration: underline;\n        }\n\n        @media (max-width: 768px) {\n            .container {\n                grid-template-columns: 1fr;\n                gap: 2rem;\n                padding: 1rem 0;\n            }\n\n            header h1 {\n                font-size: 1.8rem;\n            }\n\n            .statement-block, .tool-section, .summary-section {\n                padding: 1.5rem;\n            }\n\n            .statement-block h2 {\n                font-size: 1.8rem;\n            }\n\n            .tool-section h3 {\n                font-size: 1.5rem;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com\">\n    <meta property=\"og:title\" content=\"Outil de Diagnostic de Vitalité des Espaces Verts Urbains\">\n    <meta property=\"og:description\" content=\"Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.\">\n    <meta property=\"og:url\" content=\"https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Outil de Diagnostic de Vitalité des Espaces Verts Urbains\", \"description\": \"Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.\", \"url\": \"https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68\" data-runtime-mode=\"analysis_tool\">\n    <header>\n        <h1>Diagnostic de Vitalité des Espaces Verts Urbains</h1>\n    </header>\n\n    <div class=\"container\">\n        <section class=\"statement-block\">\n            <h2>ÉVALUEZ LA SANTÉ DE VOS ESPACES VERTS AVEC PRÉCISION</h2>\n            <p>Cet outil novateur est conçu pour les gestionnaires de parcs, les urbanistes et les citoyens engagés. Il permet d'analyser le bien-être de votre environnement végétal urbain en se basant sur des indicateurs fiables et pertinents.</p>\n            <p>Prenez des décisions éclairées pour la préservation et le développement de la biodiversité locale.</p>\n            <ul>\n                <li>Optimisation de l'irrigation et de la consommation d'eau.</li>\n                <li>Suivi de la diversité des espèces végétales et animales.</li>\n                <li>Analyse approfondie de la qualité des sols.</li>\n                <li>Conseils personnalisés pour l'entretien écologique.</li>\n            </ul>\n        </section>\n\n        <section class=\"tool-section\">\n            <h3>ANALYSE RAPIDE DE VOTRE ESPACE VERT</h3>\n            <form id=\"tool-form\">\n                <label for=\"surface\">Surface de l'espace (m²):</label>\n                <input type=\"number\" id=\"surface\" name=\"surface\" min=\"10\" max=\"100000\" value=\"1000\" required>\n\n                <label for=\"species-diversity\">Nombre d'espèces végétales distinctes:</label>\n                <input type=\"number\" id=\"species-diversity\" name=\"species-diversity\" min=\"1\" max=\"500\" value=\"20\" required>\n\n                <label for=\"soil-quality\">Qualité du sol (1=Faible, 5=Excellente):</label>\n                <input type=\"number\" id=\"soil-quality\" name=\"soil-quality\" min=\"1\" max=\"5\" value=\"3\" required>\n\n                <label for=\"irrigation-mode\">Mode d'irrigation principal:</label>\n                <select id=\"irrigation-mode\" name=\"irrigation-mode\">\n                    <option value=\"manuel\">Manuel</option>\n                    <option value=\"automatique\">Automatique</option>\n                    <option value=\"pluvial\">Pluvial (récupération d'eau)</option>\n                    <option value=\"aucun\">Aucun (dépend des précipitations)</option>\n                </select>\n\n                <label for=\"pollution-level\">Niveau d'exposition à la pollution (1=Faible, 5=Élevé):</label>\n                <input type=\"number\" id=\"pollution-level\" name=\"pollution-level\" min=\"1\" max=\"5\" value=\"2\" required>\n\n                <button type=\"submit\" id=\"tool-submit\" data-affiliate-slot=\"diagnostic-submit\">LANCER LE DIAGNOSTIC</button>\n            </form>\n\n            <div id=\"tool-result\">\n                <h4>RÉSULTATS DE L'ANALYSE</h4>\n                <p>Vos résultats apparaîtront ici après le diagnostic.</p>\n            </div>\n        </section>\n    </div>\n\n    <section class=\"summary-section\">\n        <h2>COMPRENDRE LES INDICATEURS CLÉS</h2>\n        <p>Notre méthodologie se base sur des critères reconnus pour évaluer la résilience et la vitalité de vos espaces verts urbains. Chaque indicateur contribue à une meilleure compréhension de l'écosystème en place.</p>\n        <div class=\"key-metrics\">\n            <div class=\"key-metric-item\">\n                <h4>DIVERSITÉ BIOLOGIQUE</h4>\n                <p>Mesure la richesse en espèces végétales et la présence de faune, essentielle à l'équilibre écologique.</p>\n            </div>\n            <div class=\"key-metric-item\">\n                <h4>QUALITÉ PÉDOLOGIQUE</h4>\n                <p>Évalue la composition, la structure et la fertilité du sol, pilier de la croissance végétale saine.</p>\n            </div>\n            <div class=\"key-metric-item\">\n                <h4>GESTION HYDRIQUE</h4>\n                <p>Analyse l'efficacité de l'irrigation et la dépendance aux ressources en eau, crucial pour la durabilité.</p>\n            </div>\n            <div class=\"key-metric-item\">\n                <h4>RÉSILIENCE ENVIRONNEMENTALE</h4>\n                <p>Indique la capacité de l'espace à faire face aux stress urbains (pollution, chaleur, fragmentation).</p>\n            </div>\n        </div>\n    </section>\n\n    <section class=\"seo-section\">\n        <h3>OPTIMISEZ VOS ESPACES VERTS URBAINS</h3>\n        <p>Vous recherchez des solutions pour l'aménagement paysager durable à Paris, Lyon, Marseille ou toute autre ville française ? Notre <a href=\"#\">outil de diagnostic environnemental</a> est la référence pour les collectivités et les professionnels du paysage. Évaluez la santé de vos parcs municipaux, jardins publics, et espaces verts d'entreprise. Obtenez une <a href=\"#\">analyse de biodiversité urbaine</a> précise et des recommandations pour la <a href=\"#\">gestion écologique des espaces verts</a>. Notre méthode permet de calculer l'indice de vitalité de vos plantations, d'optimiser la consommation d'eau pour l'irrigation et d'identifier les zones à améliorer pour le bien-être de la faune et de la flore. Que vous soyez un service des espaces verts, un bureau d'études paysagères ou un citoyen soucieux de l'environnement, cet outil vous fournit les données nécessaires pour agir efficacement. Découvrez comment améliorer la <a href=\"#\">qualité de l'air en ville</a> grâce à une meilleure gestion de vos végétaux et contribuez à la création de <a href=\"#\">villes plus vertes et résilientes</a>. L'évaluation de l'état des sols et de la diversité des espèces n'a jamais été aussi accessible.</p>\n    </section>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            const surface = parseInt(document.getElementById('surface').value);\n            const speciesDiversity = parseInt(document.getElementById('species-diversity').value);\n            const soilQuality = parseInt(document.getElementById('soil-quality').value);\n            const irrigationMode = document.getElementById('irrigation-mode').value;\n            const pollutionLevel = parseInt(document.getElementById('pollution-level').value);\n\n            let score = 0;\n            let feedback = [];\n\n            // Score based on species diversity (higher is better)\n            score += (speciesDiversity / 500) * 30; // Max 30 points\n\n            // Score based on soil quality (higher is better)\n            score += (soilQuality / 5) * 25; // Max 25 points\n\n            // Score based on irrigation mode\n            if (irrigationMode === 'pluvial') {\n                score += 15;\n                feedback.push(\"Excellent choix d'irrigation ! La récupération d'eau pluviale est très durable.\");\n            } else if (irrigationMode === 'automatique') {\n                score += 10;\n                feedback.push(\"L'irrigation automatique est efficace, mais assurez-vous qu'elle est optimisée pour éviter le gaspillage.\");\n            } else if (irrigationMode === 'manuel') {\n                score += 5;\n                feedback.push(\"L'irrigation manuelle demande de la vigilance pour une gestion optimale de l'eau.\");\n            } else if (irrigationMode === 'aucun') {\n                feedback.push(\"L'absence d'irrigation rend l'espace vulnérable aux périodes de sécheresse.\");\n            }\n\n            // Score based on pollution level (lower is better)\n            score += (1 - (pollutionLevel / 5)) * 10; // Max 10 points\n\n            // Adjust score based on surface (larger can be more complex but also more resilient)\n            if (surface > 5000) {\n                score += 5; // Bonus for larger spaces\n            } else if (surface < 100) {\n                feedback.push(\"Pour de très petites surfaces, chaque décision compte pour maximiser la vitalité.\");\n            }\n\n            // Final assessment\n            let vitalityRating = '';\n            if (score >= 80) {\n                vitalityRating = \"Très Bonne\";\n                feedback.unshift(\"Félicitations, votre espace vert démontre une très bonne vitalité et résilience !\");\n            } else if (score >= 60) {\n                vitalityRating = \"Bonne\";\n                feedback.unshift(\"Votre espace vert possède une bonne vitalité. Quelques améliorations pourraient le rendre excellent.\");\n            } else if (score >= 40) {\n                vitalityRating = \"Moyenne\";\n                feedback.unshift(\"La vitalité de votre espace vert est moyenne. Des actions ciblées sont recommandées.\");\n            } else {\n                vitalityRating = \"Faible\";\n                feedback.unshift(\"La vitalité de votre espace vert est faible. Une intervention rapide est conseillée pour améliorer sa santé.\");\n            }\n\n            // Round the score to a human-readable percentage\n            const percentageScore = Math.round((score / 100) * 100);\n\n            let resultHtml = `<h4>RÉSULTATS DE L'ANALYSE</h4>\n                              <p><strong>Vitalité générale:</strong> <span style=\"color:var(--copper-accent); font-weight:bold;\">${vitalityRating} (${percentageScore}%)</span></p>\n                              <p><strong>Observations clés:</strong></p>\n                              <ul>`;\n            feedback.forEach(item => {\n                resultHtml += `<li>${item}</li>`;\n            });\n            resultHtml += `</ul>\n                           <p><em>Ces résultats sont indicatifs et basés sur les données fournies. Pour une analyse complète, un examen sur site est recommandé.</em></p>`;\n\n            document.getElementById('tool-result').innerHTML = resultHtml;\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
