@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil de Diagnostic de Vitalité des Espaces Verts Urbains | ÉVALUEZ LA SANTÉ DE VOS ESPACES VERTS AVEC PRÉCISION</title>
+    <meta name="description" content="Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
+
+        :root {
+            --dark-surface: #1a1a1a;
+            --medium-dark: #2a2a2a;
+            --copper-accent: #b87333;
+            --text-light: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #444;
+            --font-display: 'Roboto Condensed', sans-serif;
+            --font-body: 'Noto Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-light);
+            background-color: var(--dark-surface);
+            margin: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--medium-dark);
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--copper-accent);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            flex-grow: 1;
+        }
+
+        .statement-block {
+            padding: 2rem;
+            background-color: var(--medium-dark);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .statement-block h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--copper-accent);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .statement-block p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .statement-block ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .statement-block ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .statement-block ul li::before {
+            content: '✓';
+            color: var(--copper-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .tool-section {
+            background-color: var(--medium-dark);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+        }
+
+        .tool-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--copper-accent);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        #tool-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #tool-form input[type="number"],
+        #tool-form select,
+        #tool-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 1.2rem;
+            background-color: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        #tool-form input[type="number"]:focus,
+        #tool-form select:focus,
+        #tool-form textarea:focus {
+            outline: none;
+            border-color: var(--copper-accent);
+        }
+
+        #tool-submit {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: var(--copper-accent);
+            color: var(--dark-surface);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        #tool-submit:hover {
+            background-color: #d18d42;
+        }
+
+        #tool-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            min-height: 100px;
+        }
+
+        #tool-result h4 {
+            font-family: var(--font-display);
+            color: var(--copper-accent);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        #tool-result p {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .summary-section {
+            grid-column: 1 / -1;
+            padding: 2rem;
+            background-color: var(--medium-dark);
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .summary-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--copper-accent);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .summary-section .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .key-metric-item {
+            background-color: var(--dark-surface);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .key-metric-item h4 {
+            font-family: var(--font-display);
+            color: var(--copper-accent);
+            margin-top: 0;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .key-metric-item p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .seo-section {
+            grid-column: 1 / -1;
+            background-color: var(--dark-surface);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 5%;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .seo-section h3 {
+            font-family: var(--font-display);
+            color: var(--copper-accent);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .seo-section a {
+            color: var(--copper-accent);
+            text-decoration: none;
+        }
+
+        .seo-section a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1rem 0;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .statement-block, .tool-section, .summary-section {
+                padding: 1.5rem;
+            }
+
+            .statement-block h2 {
+                font-size: 1.8rem;
+            }
+
+            .tool-section h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com">
+    <meta property="og:title" content="Outil de Diagnostic de Vitalité des Espaces Verts Urbains">
+    <meta property="og:description" content="Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.">
+    <meta property="og:url" content="https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Outil de Diagnostic de Vitalité des Espaces Verts Urbains", "description": "Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.", "url": "https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68" data-runtime-mode="analysis_tool">
+    <header>
+        <h1>Diagnostic de Vitalité des Espaces Verts Urbains</h1>
+    </header>
+
+    <div class="container">
+        <section class="statement-block">
+            <h2>ÉVALUEZ LA SANTÉ DE VOS ESPACES VERTS AVEC PRÉCISION</h2>
+            <p>Cet outil novateur est conçu pour les gestionnaires de parcs, les urbanistes et les citoyens engagés. Il permet d'analyser le bien-être de votre environnement végétal urbain en se basant sur des indicateurs fiables et pertinents.</p>
+            <p>Prenez des décisions éclairées pour la préservation et le développement de la biodiversité locale.</p>
+            <ul>
+                <li>Optimisation de l'irrigation et de la consommation d'eau.</li>
+                <li>Suivi de la diversité des espèces végétales et animales.</li>
+                <li>Analyse approfondie de la qualité des sols.</li>
+                <li>Conseils personnalisés pour l'entretien écologique.</li>
+            </ul>
+        </section>
+
+        <section class="tool-section">
+            <h3>ANALYSE RAPIDE DE VOTRE ESPACE VERT</h3>
+            <form id="tool-form">
+                <label for="surface">Surface de l'espace (m²):</label>
+                <input type="number" id="surface" name="surface" min="10" max="100000" value="1000" required>
+
+                <label for="species-diversity">Nombre d'espèces végétales distinctes:</label>
+                <input type="number" id="species-diversity" name="species-diversity" min="1" max="500" value="20" required>
+
+                <label for="soil-quality">Qualité du sol (1=Faible, 5=Excellente):</label>
+                <input type="number" id="soil-quality" name="soil-quality" min="1" max="5" value="3" required>
+
+                <label for="irrigation-mode">Mode d'irrigation principal:</label>
+                <select id="irrigation-mode" name="irrigation-mode">
+                    <option value="manuel">Manuel</option>
+                    <option value="automatique">Automatique</option>
+                    <option value="pluvial">Pluvial (récupération d'eau)</option>
+                    <option value="aucun">Aucun (dépend des précipitations)</option>
+                </select>
+
+                <label for="pollution-level">Niveau d'exposition à la pollution (1=Faible, 5=Élevé):</label>
+                <input type="number" id="pollution-level" name="pollution-level" min="1" max="5" value="2" required>
+
+                <button type="submit" id="tool-submit" data-affiliate-slot="diagnostic-submit">LANCER LE DIAGNOSTIC</button>
+            </form>
+
+            <div id="tool-result">
+                <h4>RÉSULTATS DE L'ANALYSE</h4>
+                <p>Vos résultats apparaîtront ici après le diagnostic.</p>
+            </div>
+        </section>
+    </div>
+
+    <section class="summary-section">
+        <h2>COMPRENDRE LES INDICATEURS CLÉS</h2>
+        <p>Notre méthodologie se base sur des critères reconnus pour évaluer la résilience et la vitalité de vos espaces verts urbains. Chaque indicateur contribue à une meilleure compréhension de l'écosystème en place.</p>
+        <div class="key-metrics">
+            <div class="key-metric-item">
+                <h4>DIVERSITÉ BIOLOGIQUE</h4>
+                <p>Mesure la richesse en espèces végétales et la présence de faune, essentielle à l'équilibre écologique.</p>
+            </div>
+            <div class="key-metric-item">
+                <h4>QUALITÉ PÉDOLOGIQUE</h4>
+                <p>Évalue la composition, la structure et la fertilité du sol, pilier de la croissance végétale saine.</p>
+            </div>
+            <div class="key-metric-item">
+                <h4>GESTION HYDRIQUE</h4>
+                <p>Analyse l'efficacité de l'irrigation et la dépendance aux ressources en eau, crucial pour la durabilité.</p>
+            </div>
+            <div class="key-metric-item">
+                <h4>RÉSILIENCE ENVIRONNEMENTALE</h4>
+                <p>Indique la capacité de l'espace à faire face aux stress urbains (pollution, chaleur, fragmentation).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <h3>OPTIMISEZ VOS ESPACES VERTS URBAINS</h3>
+        <p>Vous recherchez des solutions pour l'aménagement paysager durable à Paris, Lyon, Marseille ou toute autre ville française ? Notre <a href="#">outil de diagnostic environnemental</a> est la référence pour les collectivités et les professionnels du paysage. Évaluez la santé de vos parcs municipaux, jardins publics, et espaces verts d'entreprise. Obtenez une <a href="#">analyse de biodiversité urbaine</a> précise et des recommandations pour la <a href="#">gestion écologique des espaces verts</a>. Notre méthode permet de calculer l'indice de vitalité de vos plantations, d'optimiser la consommation d'eau pour l'irrigation et d'identifier les zones à améliorer pour le bien-être de la faune et de la flore. Que vous soyez un service des espaces verts, un bureau d'études paysagères ou un citoyen soucieux de l'environnement, cet outil vous fournit les données nécessaires pour agir efficacement. Découvrez comment améliorer la <a href="#">qualité de l'air en ville</a> grâce à une meilleure gestion de vos végétaux et contribuez à la création de <a href="#">villes plus vertes et résilientes</a>. L'évaluation de l'état des sols et de la diversité des espèces n'a jamais été aussi accessible.</p>
+    </section>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const surface = parseInt(document.getElementById('surface').value);
+            const speciesDiversity = parseInt(document.getElementById('species-diversity').value);
+            const soilQuality = parseInt(document.getElementById('soil-quality').value);
+            const irrigationMode = document.getElementById('irrigation-mode').value;
+            const pollutionLevel = parseInt(document.getElementById('pollution-level').value);
+
+            let score = 0;
+            let feedback = [];
+
+            // Score based on species diversity (higher is better)
+            score += (speciesDiversity / 500) * 30; // Max 30 points
+
+            // Score based on soil quality (higher is better)
+            score += (soilQuality / 5) * 25; // Max 25 points
+
+            // Score based on irrigation mode
+            if (irrigationMode === 'pluvial') {
+                score += 15;
+                feedback.push("Excellent choix d'irrigation ! La récupération d'eau pluviale est très durable.");
+            } else if (irrigationMode === 'automatique') {
+                score += 10;
+                feedback.push("L'irrigation automatique est efficace, mais assurez-vous qu'elle est optimisée pour éviter le gaspillage.");
+            } else if (irrigationMode === 'manuel') {
+                score += 5;
+                feedback.push("L'irrigation manuelle demande de la vigilance pour une gestion optimale de l'eau.");
+            } else if (irrigationMode === 'aucun') {
+                feedback.push("L'absence d'irrigation rend l'espace vulnérable aux périodes de sécheresse.");
+            }
+
+            // Score based on pollution level (lower is better)
+            score += (1 - (pollutionLevel / 5)) * 10; // Max 10 points
+
+            // Adjust score based on surface (larger can be more complex but also more resilient)
+            if (surface > 5000) {
+                score += 5; // Bonus for larger spaces
+            } else if (surface < 100) {
+                feedback.push("Pour de très petites surfaces, chaque décision compte pour maximiser la vitalité.");
+            }
+
+            // Final assessment
+            let vitalityRating = '';
+            if (score >= 80) {
+                vitalityRating = "Très Bonne";
+                feedback.unshift("Félicitations, votre espace vert démontre une très bonne vitalité et résilience !");
+            } else if (score >= 60) {
+                vitalityRating = "Bonne";
+                feedback.unshift("Votre espace vert possède une bonne vitalité. Quelques améliorations pourraient le rendre excellent.");
+            } else if (score >= 40) {
+                vitalityRating = "Moyenne";
+                feedback.unshift("La vitalité de votre espace vert est moyenne. Des actions ciblées sont recommandées.");
+            } else {
+                vitalityRating = "Faible";
+                feedback.unshift("La vitalité de votre espace vert est faible. Une intervention rapide est conseillée pour améliorer sa santé.");
+            }
+
+            // Round the score to a human-readable percentage
+            const percentageScore = Math.round((score / 100) * 100);
+
+            let resultHtml = `<h4>RÉSULTATS DE L'ANALYSE</h4>
+                              <p><strong>Vitalité générale:</strong> <span style="color:var(--copper-accent); font-weight:bold;">${vitalityRating} (${percentageScore}%)</span></p>
+                              <p><strong>Observations clés:</strong></p>
+                              <ul>`;
+            feedback.forEach(item => {
+                resultHtml += `<li>${item}</li>`;
+            });
+            resultHtml += `</ul>
+                           <p><em>Ces résultats sont indicatifs et basés sur les données fournies. Pour une analyse complète, un examen sur site est recommandé.</em></p>`;
+
+            document.getElementById('tool-result').innerHTML = resultHtml;
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
