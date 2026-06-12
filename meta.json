@@ -1,0 +1,46 @@
+{
+  "name": "Outil de Diagnostic de Vitalité des Espaces Verts Urbains",
+  "description": "Évaluez la santé et la biodiversité de vos parcs et jardins urbains avec des indicateurs clés.",
+  "theme": "tool",
+  "design_theme": "copper-grid",
+  "structure_preset": "precision-bento",
+  "render_direction": "atlas-report",
+  "page_blueprint": "dossier-rail",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://outil-de-diagnostic-de-vitalite-des-espaces-ver-c028fe68.onrender.com",
+  "created": "2026-06-12T00:26:01.690880+00:00",
+  "owner_user_id": "user-1774825923424-663",
+  "owner_username": "inso",
+  "owner_display_name": "Inso",
+  "provider_space_id": "new-sites",
+  "provider_space_name": "New Sites",
+  "status": "generated",
+  "run_id": "run-1781223829415",
+  "external_site_request_id": null,
+  "external_client_ref": null,
+  "external_source_label": null,
+  "source_type": "generated",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "qa": {
+    "status": "pending"
+  },
+  "features": [
+    "Hero pattern: split",
+    "Proof module: metrics",
+    "Design theme: Copper Grid",
+    "Render direction: Atlas Report",
+    "Page blueprint: Dossier Rail",
+    "Runtime mode: analysis_tool",
+    "Generation mode: direct_html",
+    "Artifact rendered, awaiting QA and deployment"
+  ]
+}
